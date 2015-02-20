@@ -1,0 +1,1166 @@
+{
+	"jobs": {
+		"countries": {
+			"params": {
+				"max_operations": 100,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_countries": {
+					"table": "local_v1.t_country",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.countries",
+			"fields": {
+				"id_country": {
+					"source_field": "main_source_countries.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_country": {
+					"source_field": "main_source_countries.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_country": {
+					"source_field": "main_source_countries.position",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"departments": {
+			"params": {
+				"max_operations": 200,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_departments": {
+					"table": "local_v1.t_departement",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.departments",
+			"fields": {
+				"id_department": {
+					"source_field": "main_source_departments.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_department": {
+					"source_field": "main_source_departments.nom",
+					"default_value": "",
+					"modifiers": []
+				},
+				"code_department": {
+					"source_field": "main_source_departments.id",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"laboratories": {
+			"params": {
+				"max_operations": 1000,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 200,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_laboratories": {
+					"table": "local_v1.t_laboratoire",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.laboratories",
+			"fields": {
+				"id_laboratory": {
+					"source_field": "main_source_laboratories.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_laboratory": {
+					"source_field": "main_source_laboratories.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_laboratory": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"titles": {
+			"params": {
+				"max_operations": 10,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 20,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_titles": {
+					"table": "local_v1.t_gender",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.titles",
+			"fields": {
+				"id_title": {
+					"source_field": "main_source_titles.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_title": {
+					"source_field": "main_source_titles.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"shortname_title": {
+					"source_field": "main_source_titles.shortname",
+					"default_value": 0,
+					"modifiers": []
+				},
+				"position_title": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"soft_publishers": {
+			"params": {
+				"max_operations": 100,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_soft_publishers": {
+					"table": "local_v1.t_editeur_logiciel",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.soft_publishers",
+			"fields": {
+				"id_sp": {
+					"source_field": "main_source_soft_publishers.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_sp": {
+					"source_field": "main_source_soft_publishers.editeur",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"code_erp_sp": {
+					"source_field": "main_source_soft_publishers.id_advantage",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_sp": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"proof_texts": {
+			"params": {
+				"max_operations": 10,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 10,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_proof_texts": {
+					"table": "local_v1.t_textesjustif",
+					"id": "id_tj",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.proof_texts",
+			"fields": {
+				"id_proof_text": {
+					"source_field": "main_source_proof_texts.id_tj",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_proof_text": {
+					"source_field": "main_source_proof_texts.name_tj",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"value_proof_text": {
+					"source_field": "main_source_proof_texts.value_tj",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"roles": {
+			"params": {
+				"max_operations": 50,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 25,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_roles": {
+					"table": "local_v1.t_role",
+					"id": "value_role",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.roles",
+			"fields": {
+				"value_role": {
+					"source_field": "main_source_roles.value_role",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"name_role": {
+					"source_field": "main_source_roles.title_role",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"description_role": {
+					"source_field": "main_source_roles.description_role",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"family_situations": {
+			"params": {
+				"max_operations": 10,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 10,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_family_situations": {
+					"table": "local_v1.t_situation_familiale",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.family_situations",
+			"fields": {
+				"id_fs": {
+					"source_field": "main_source_family_situations.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_fs": {
+					"source_field": "main_source_family_situations.nom",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_fs": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"interests": {
+			"params": {
+				"max_operations": 100,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_interests": {
+					"table": "local_v1.t_centre_interet",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.interests",
+			"fields": {
+				"id_interest": {
+					"source_field": "main_source_interests.id",
+					"default_value": "",
+					"modifiers": []
+				},
+				"name_interest": {
+					"source_field": "main_source_interests.nom",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_interest": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"specialties": {
+			"params": {
+				"max_operations": 100,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_specialties": {
+					"table": "local_v1.t_userspecialite",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.specialties",
+			"fields": {
+				"id_specialty": {
+					"source_field": "main_source_specialties.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"code_specialty": {
+					"source_field": "main_source_specialties.code",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"name_specialty": {
+					"source_field": "main_source_specialties.specialite",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"professions": {
+			"params": {
+				"max_operations": 50,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 25,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_professions": {
+					"table": "local_v1.t_profession",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.professions",
+			"fields": {
+				"id_profession": {
+					"source_field": "main_source_professions.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_profession": {
+					"source_field": "main_source_professions.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_profession": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"products": {
+			"params": {
+				"max_operations": 20,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 20,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_products": {
+					"table": "local_v1.t_productline",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.products",
+			"fields": {
+				"id_product": {
+					"source_field": "main_source_products.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_product": {
+					"source_field": "main_source_products.libelle",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"code_product": {
+					"source_field": "main_source_products.code",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"package_product": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_product": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"interfaced_softwares": {
+			"params": {
+				"max_operations": 100,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_interfaced_softwares": {
+					"table": "local_v1.t_logiciel_interface",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.interfaced_softwares",
+			"fields": {
+				"id_is": {
+					"source_field": "main_source_interfaced_softwares.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_is": {
+					"source_field": "main_source_interfaced_softwares.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_sp": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelSoftPublisher::missingIdToNull"]
+				},
+				"position_is": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"institutes": {
+			"params": {
+				"max_operations": 1000,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 500,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_institutes": {
+					"table": "local_v1.t_corporation",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.institutes",
+			"fields": {
+				"id_institute": {
+					"source_field": "main_source_institutes.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_institute": {
+					"source_field": "main_source_institutes.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"creation_date_institute": {
+					"source_field": "main_source_institutes.registrationDate",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"postal_code_institute": {
+					"source_field": "main_source_institutes.postalCode",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"city_institute": {
+					"source_field": "main_source_institutes.town",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_country": {
+					"source_field": "main_source_institutes.country_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelCountry::missingIdToNull"]
+				},
+				"uuid_institute": {
+					"source_field": "main_source_institutes.uuid",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"erp_code_institute": {
+					"source_field": "main_source_institutes.advantageCode",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"description_institute": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"authorized_email_institute": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_institute": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"functions": {
+			"params": {
+				"max_operations": 100,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 50,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_functions": {
+					"table": "local_v1.t_function",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.functions",
+			"fields": {
+				"id_function": {
+					"source_field": "main_source_functions.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_function": {
+					"source_field": "main_source_functions.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_profession": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelProfession::missingIdToNull"]
+				},
+				"position_function": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"exercise_modes": {
+			"params": {
+				"max_operations": 20,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 20,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_exercise_modes": {
+					"table": "local_v1.t_exercisemode",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.exercise_modes",
+			"fields": {
+				"id_em": {
+					"source_field": "main_source_exercise_modes.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"name_em": {
+					"source_field": "main_source_exercise_modes.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"position_em": {
+					"source_field": "%new%",
+					"default_value": 0,
+					"modifiers": []
+				}
+			}
+		},
+		"users": {
+			"params": {
+				"max_operations": 5000,
+				"offset_from_start": 120452,
+				"max_tuple_per_insert": 1000,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_users": {
+					"table": "local_v1.t_user",
+					"id": "id",
+					"fields": "DISTINCT t_user.*, t_userdroit.roles",
+					"joins": [
+						["t_userdroit", " LEFT OUTER JOIN ", "t_user.id = t_userdroit.user_id"]
+					],
+					"conditions": {
+
+					}
+				}
+			},
+			"target": "default.users",
+			"fields": {
+				"id_user": {
+					"source_field": "main_source_users.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"email_user": {
+					"source_field": "main_source_users.email",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"password_user": {
+					"source_field": "main_source_users.password",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"registration_date_user": {
+					"source_field": "main_source_users.registrationDate",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"second_email_user": {
+					"source_field": "main_source_users.secondmail",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_title": {
+					"source_field": "main_source_users.gender_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelTitle::missingIdToNull"]
+				},
+				"name_user": {
+					"source_field": "main_source_users.name",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"firstname_user": {
+					"source_field": "main_source_users.firstname",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"gender_user": {
+					"source_field": "main_source_users.sexe",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"birthday_user": {
+					"source_field": "main_source_users.date_naissance",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"has_children_user": {
+					"source_field": "main_source_users.enfant",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"has_grandchildren_user": {
+					"source_field": "main_source_users.petit_enfant",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_fs": {
+					"source_field": "main_source_users.situation_familiale_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelFamilySituation::missingIdToNull"]
+				},
+				"adeli_user": {
+					"source_field": "main_source_users.adeli",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"rpps_user": {
+					"source_field": "main_source_users.rpps",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"cps_user": {
+					"source_field": "main_source_users.cps",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_profession": {
+					"source_field": "main_source_users.profession_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelProfession::missingIdToNull"]
+				},
+				"id_function": {
+					"source_field": "main_source_users.function_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelFunction::missingIdToNull"]
+				},
+				"id_em": {
+					"source_field": "main_source_users.exerciseMode_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelExerciseMode::missingIdToNull"]
+				},
+				"id_specialty": {
+					"source_field": "main_source_users.specialite_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelSpecialty::missingIdToNull"]
+				},
+				"id_laboratory": {
+					"source_field": "main_source_users.laboratoire_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelLaboratory::missingIdToNull"]
+				},
+				"laboratory_other_user": {
+					"source_field": "main_source_users.laboratoire_autre",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"postal_code_user": {
+					"source_field": "main_source_users.postalCode",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"city_user": {
+					"source_field": "main_source_users.town",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_department": {
+					"source_field": "main_source_users.departement_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelDepartment::missingIdToNull"]
+				},
+				"id_country": {
+					"source_field": "main_source_users.country_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelCountry::missingIdToNull"]
+				},
+				"erp_code_user": {
+					"source_field": "main_source_users.advantageCode",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"permissions_user": {
+					"source_field": "main_source_users.roles",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"uuid_user": {
+					"source_field": "main_source_users.uuid",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"vip_user": {
+					"source_field": "main_source_users.flag_vip",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"accept_partners_mail_user": {
+					"source_field": "main_source_users.recevoir_mail_partenaire",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"accept_vidal_mail_user": {
+					"source_field": "main_source_users.recevoir_mail_vidal",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"validity_date_user": {
+					"source_field": "main_source_users.date_validite",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"biography_user": {
+					"source_field": "main_source_users.biographie",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"twitter_user": {
+					"source_field": "main_source_users.twitter",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"google_plus_user": {
+					"source_field": "main_source_users.googlePlus",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"pseudo_user": {
+					"source_field": "main_source_users.pseudo",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_product_origin_registration": {
+					"source_field": "main_source_users.provenance",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\Modelproduct::missingProductNameToNull"]
+				}
+			}
+		},
+		"proofs": {
+			"params": {
+				"max_operations": 2000,
+				"offset_from_start": 0,
+				"max_tuple_per_insert": 500,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_proofs": {
+					"table": "local_v1.t_userjustifs",
+					"id": "id_uj",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.user_proofs",
+			"fields": {
+				"id_user_proof": {
+					"source_field": "main_source_proofs.id_uj",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"id_user": {
+					"source_field": "main_source_proofs.id_user",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelUser::missingIdToNull"]
+				},
+				"filename_user_proof": {
+					"source_field": "main_source_proofs.filename_uj",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"comment_user_proof": {
+					"source_field": "main_source_proofs.comment_uj",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"added_date_user_proof": {
+					"source_field": "main_source_proofs.date_added_uj",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"updated_date_user_proof": {
+					"source_field": "main_source_proofs.date_update_uj",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_admin": {
+					"source_field": "main_source_proofs.id_user_update",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelUser::missingIdToNull"]
+				}
+			}
+		},
+		"logs": {
+			"params": {
+				"max_operations": 5000,
+				"offset_from_start": 24020,
+				"max_tuple_per_insert": 1000,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_logs": {
+					"table": "local_v1.t_log",
+					"id": "id_log",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.logs",
+			"fields": {
+				"id_log": {
+					"source_field": "main_source_logs.id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"date_log": {
+					"source_field": "main_source_logs.date_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"email_user_log": {
+					"source_field": "main_source_logs.email_user_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_user_log": {
+					"source_field": "main_source_logs.id_user_log",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelUser::missingIdToNull"]
+				},
+				"email_user_auth_log": {
+					"source_field": "main_source_logs.email_user_auth_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"item_label_log": {
+					"source_field": "main_source_logs.item_label_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"item_type_log": {
+					"source_field": "main_source_logs.item_type_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"item_id_log": {
+					"source_field": "main_source_logs.item_id_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"get_json_log": {
+					"source_field": "main_source_logs.get_json_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"post_json_log": {
+					"source_field": "main_source_logs.post_json_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"server_json_log": {
+					"source_field": "main_source_logs.server_json_log",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"diff_json_log": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"message_log": {
+					"source_field": "%new%",
+					"default_value": "",
+					"modifiers": []
+				}
+			}
+		},
+		"licenses": {
+			"params": {
+				"max_operations": 5000,
+				"offset_from_start": 2400,
+				"max_tuple_per_insert": 1000,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_licenses": {
+					"table": "local_v1.t_cle_activation",
+					"id": "id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.licenses",
+			"fields": {
+				"id_license": {
+					"source_field": "main_source_licenses.id",
+					"default_value": "",
+					"modifiers": []
+				},
+				"key_license": {
+					"source_field": "main_source_licenses.activationKey",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_product": {
+					"source_field": "main_source_licenses.type_cle",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelProduct::missingIdToNull"]
+				},
+				"creation_date_license": {
+					"source_field": "main_source_licenses.date_ajout",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"validity_date_license": {
+					"source_field": "main_source_licenses.date_validite",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"id_is": {
+					"source_field": "main_source_licenses.linked_software",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelInterfacedSoftware::missingIdToNull"]
+				},
+				"activation_number_license": {
+					"source_field": "main_source_licenses.nbActivation",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"max_activation_number_license": {
+					"source_field": "main_source_licenses.nbMaxActivation",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"auto_renewal_license": {
+					"source_field": "main_source_licenses.reconduction",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"erp_code_license": {
+					"source_field": "main_source_licenses.contrat_advantage",
+					"default_value": "NULL",
+					"modifiers": []
+				},
+				"value_license": {
+					"source_field": "%new%",
+					"default_value": "NULL",
+					"modifiers": []
+				}
+			}
+		},
+		"user_licenses": {
+			"params": {
+				"max_operations": 5000,
+				"offset_from_start": 14200,
+				"max_tuple_per_insert": 1000,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_user_licenses": {
+					"table": "local_v1.t_cle_activation",
+					"id": "id",
+					"fields": "id, user_id",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.user_licenses",
+			"fields": {
+				"id_license": {
+					"source_field": "main_source_user_licenses.id",
+					"default_value": "",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelLicense::missingIdToNull"],
+					"mandatory_value": true
+				},
+				"id_user": {
+					"source_field": "main_source_user_licenses.user_id",
+					"default_value": "NULL",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelUser::missingIdToNull"],
+					"mandatory_value": true
+				}
+			}
+		},
+		"user_interests": {
+			"params": {
+				"max_operations": 6000,
+				"offset_from_start": 32000,
+				"max_tuple_per_insert": 1000,
+				"lock_tables": false,
+				"stop_on_error": false
+			},
+			"sources": {
+				"main_source_user_interests": {
+					"table": "local_v1.t_user_centre_interet",
+					"id": "user_id",
+					"fields": "*",
+					"joins": [],
+					"conditions": []
+				}
+			},
+			"target": "default.user_interests",
+			"fields": {
+				"id_interest": {
+					"source_field": "main_source_user_interests.centre_interet_id",
+					"default_value": "",
+					"modifiers": [],
+					"mandatory_value": true
+				},
+				"id_user": {
+					"source_field": "main_source_user_interests.user_id",
+					"default_value": "",
+					"modifiers": ["lib\\vidal\\id\\models\\ModelUser::missingIdToNull"],
+					"mandatory_value": true
+				}
+			}
+		}
+	}
+}

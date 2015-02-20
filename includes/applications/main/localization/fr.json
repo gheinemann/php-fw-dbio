@@ -1,0 +1,87 @@
+{"seo":{
+    "index":{
+        "index":{
+            "title":"Index - Index | local fr",
+            "description":"Index - Index | local fr"
+        }
+    }
+}, "terms":{
+    "global":{
+        "forms":{
+            "inputRequire":"Champ obligatoire",
+            "inputsRequire":"Champs obligatoires",
+            "errorMimeType":"Impossible d'uploader le fichier %s, type de fichier non-autoris&#233;.",
+            "errorMimeTypes":"Impossible d'uploader les fichiers %s, types de fichiers non autoris&#233;.",
+            "errorUploadSend":"Impossible d'uploader le fichier %s.",
+            "errorUploadsSend":"Impossible d'uploader les fichiers %s.",
+            "errorInputWithAlternative":"Un des champs %s, doit &ecirc;tre renseign&#233;.",
+            "errorInputsWithAlternative":"Un des champs %s, doit &ecirc;tre renseign&#233;.",
+            "errorInputWithConfirm":"Les valeurs des champs %s, doivent concorder.",
+            "errorInputsWithConfirm":"Les valeurs des champs %s, doivent concorder.",
+            "errorInputRequire":"Le champ %s est obligatoire.",
+            "errorInputsRequire":"Les champs %s sont obligatoires.",
+            "errorInputRequirecgv":"Vous n'avez pas accept&#233; les termes et conditions du site Vidal.fr.",
+            "errorInputIncorrect":"La valeur du champ %s est incorrecte.",
+            "errorInputIncorrectusername":"Le %s est incorrect.",
+            "errorInputIncorrectpassword":"Seuls les caract&egrave;res alphanum&#233;riques (a-z, A-Z, 0-9) sont autoris&#233;s pour le %s.",
+            "errorInputIncorrectpseudo":"Seuls les caract&egrave;res alphanum&#233;riques (a-z, A-Z, 0-9) sont autoris&#233;s pour le %s.",
+            "errorInputsIncorrect":"Les valeurs des champs %s sont incorrectes.",
+            "infosCaptcha":"Merci de saisir le code pr&#233;sent&#233;",
+            "reloadCaptcha":"<a href='%s'>Cliquez-ici<\/a> pour recharger l'image",
+            "noAvailableValue":"Il n'y a pas de valeur disponible.",
+            "error":"Une erreur s'est produite lors de l'enregistrement.",
+            "error2":"Une erreur s'est produite. Veuillez r&#233;essayer ult&#233;rieurement.",
+            "errorPseudo":"Le pseudo est d&#233;j&agrave; utilis&#233;, veuillez en entrer un autre.",
+            "upload":{
+                "seeFile":"Voir le fichier",
+                "deleteFile":"Supprimer le fichier",
+                "noFile":"Aucun fichier s&#233;lectionn&#233;.",
+                "browse":"Parcourir"
+            },
+            "chosen":{
+                "no_result_text":"Aucun r&#233;sultat pour :",
+                "default_text":"Cliquer pour s&#233;lectionner"
+            }
+        },
+        "user":{
+            "creation":{
+                "CPSNotFound":"Num&#233;ro invalide.<br>Le compte sera activ&#233; par le service client d&egrave;s r&#233;ception par fax, courrier ou email d'un justificatif.",
+                "emailUsed":"L'email que vous avez saisi est d&#233;j&agrave; utilis&#233; dans notre base. Essayez de vous connecter au site avec cet email en cliquant au besoin sur \"Mot de passe oubli&#233;\".",
+                "RPPSUsed":"Le num&#233;ro RPPS que vous avez saisi est d&#233;j&agrave; utilis&#233; dans notre base.<br>Il se peut que vous disposiez d&#233;j&agrave; d'un compte Vidal. Dans le cas contraire, il peut s'agir d'une usurpation, <br>veuillez contacter notre service client par <a href='http://corp.vidal.fr/contacts' target='_blank'>mail</a> ou au 0 810 0095 08.",
+                "RPPSNotFound":"Num&#233;ro invalide.<br>Le compte sera activ&#233; par le service client d&egrave;s r&#233;ception par fax, courrier ou email d'un justificatif.",
+                "accessLimitation":"Votre statut vous permettra d'acc&#233;der &agrave; l'ensemble des rubriques et documents <u>publics<\/u> du site ainsi que la possibilit&#233; de vous abonner aux <u>newsletters publi&#233;es par VIDAL</u>.<br><br><strong>Les contenus et fonctionnalit&#233;s permettant de s&#233;curiser la prescription sont en revanche exclusivement r&#233;serv&#233;s aux <u>m&#233;decins de ville</u>.<\/strong>",
+                "accessLimitationPublic":"<p>Les informations li&#233;es &agrave; la s&#233;curisation de la prescription, les fonctionnalit&#233;s avanc&#233;es, et les fonctionnalit&#233;s communautaires sont exclusivement r&#233;serv&#233;es &agrave; la communaut&#233; des prescripteurs lib&#233;raux sur le site professionnel VIDAL.<br>Si vous &ecirc;tes prescripteur lib&#233;ral, nous vous invitons &agrave; contacter notre <a href='contacts'>service client</a> pour v&#233;rifier que votre compte est &agrave; jour.</p><br/><p>Notre site public <a href=\"http://www.eurekasante.fr\" target=\"_blank\">EurekaSant&#233;</a>, vous pr&#233;sente des contenus sur :</p><ul><li><a href=\"http://www.eurekasante.fr/medicaments.html\" target=\"_blank\">Le m&#233;dicament</a></li><li><a href=\"http://www.eurekasante.fr/parapharmacie.html\" target=\"_blank\">La parapharmacie</li><li><a href=\"http://www.eurekasante.fr/maladies.html\" target=\"_blank\">Les pathologies</a></li><li><a href=\"http://www.eurekasante.fr/enfants.html\" target=\"_blank\">La sant&#233; des enfants</a></li><li><a href=\"http://www.eurekasante.fr/nutrition.html\" target=\"_blank\">La nutrition,etc..</a></li></ul>",
+                "alertDocument":"Message exp&#233;dition pi&egrave;ce par email/fax/courrier pour activation du compte."
+            }
+        },
+        "pagination":{
+            "previous":"Pr&#233;c&#233;dent",
+            "next":"Suivant"
+        },
+	    "months":
+		[
+			"Janvier","F&#233;vrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Ao&ucirc;t", "Septembre", "Octobre", "Novembre", "D&#233;cembre"
+		]
+    },
+    "backoffice":{
+        "h1":{
+            "add":"%s - Ajouter",
+            "edit":"%s - Modifier",
+            "listing":"%s - Lister",
+            "view":"D&#233;tails - %s",
+            "dbio_board":"%s - Migration de données"
+        },
+        "titles":{
+            "add":"Ajouter une entr&#233;e - %s",
+            "edit":"modifier une entr&#233;e - %s",
+            "listing":"Liste les entr&#233;es - %s",
+            "view":"D&#233;tails - %s",
+            "dbio_board":"Migration de données - %s"
+        },
+        "forms":{
+            "editDone":"Modifications effectu&#233;es.",
+            "addDone":"Enregistrement effectu&#233;.",
+            "errorSQL":"Une erreur est apparue lors de l'enregistrement dans la base de donn&#233;es."
+        }
+    }
+}}

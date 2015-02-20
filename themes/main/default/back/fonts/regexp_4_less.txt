@@ -1,0 +1,7 @@
+* Generate LESS vars from CSS
+SEARCH => .icon-([\w\-]+):before \{\n\tcontent: ("\\?[\w]+");\n\}\n?\n?
+REPLACE => @icon-$1: $2;\n
+
+* Generate CSS classes from LESS vars
+SEARCH => (@(icon-[\w\-]+)): "\\[\w]+";\n
+REPLACE =>.$2:before \{\n\tcontent: @$1;\n\}\n

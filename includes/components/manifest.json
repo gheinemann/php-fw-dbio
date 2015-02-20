@@ -1,0 +1,42 @@
+{
+	"config":
+	{
+		"relative":"./"
+	},
+    "Moment":
+    {
+        "javascript":
+        {
+            "src":
+            [
+                "moment/moment.js"
+            ]
+        }
+    },
+    "Qwest": {
+        "javascript": {
+            "src": [
+                "qwest/qwest.min.js"
+            ]
+        }
+    },
+    "Handlebars": {
+        "javascript": {
+            "src": [
+                "handlebars/handlebars-v3.0.0.js"
+            ]
+        }
+    },
+    "DBIO": {
+        "css": [
+            "dbio/dbio.css"
+        ],
+        "javascript": {
+            "src": [
+                "dbio/dbio.js"
+            ],
+            "need": ["Qwest", "Handlebars", "Moment"]
+        }
+    }
+
+}

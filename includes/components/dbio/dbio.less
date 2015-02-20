@@ -1,0 +1,201 @@
+@import "../../../themes/main/default/back/css/_variables";
+@import "../../../themes/main/default/back/css/_mixins";
+@import "../../../themes/main/default/back/fonts/_icons";
+
+.report {
+	margin:30px auto;
+}
+
+.analytics-global {
+	position:relative;margin-bottom:1.5rem;padding:20px 10px 10px;
+	background-color:darken(@white, 10%);.border-radius(@default-radius);border:solid 1px @generic-light;
+
+	.analytics-progress {
+		position:absolute;left:0;top:0;bottom:0;right:0;z-index:1;.opacity(0.6);
+		.transition(width @base-timing @ease-smooth, background-color @base-timing @ease-smooth);background-color:lighten(@warningColor, 5%);
+
+		&.half {
+			background-color:lighten(@primaryColor, 5%);
+		}
+		&.complete {
+			background-color:lighten(@validColor, 5%);
+		}
+	}
+
+	.row {
+		position: relative;z-index:2;
+		.text-shadow(1px 1px 2px @seamless-white-light);.font-bold();
+	}
+
+	.analytics-progress-value {
+		position:absolute;z-index:2;top:50%;right:100px;width:300px;margin-top:-4rem;
+		.text-center();color:@white;font-size:8rem;line-height:8rem;.font-bold();
+	}
+
+	.analytics-global-time {
+		clear: both;
+	}
+}
+
+.report-jobs,
+.report-job {
+	.clearfix();
+
+	list-style:none;
+}
+
+.report-jobs {
+	padding:10px;
+	background-color:@white;.border-radius(@default-radius);border:solid 1px @generic-light;
+
+	.report-job {
+		margin-bottom:0.5rem;padding:5px;.border-radius(@default-radius);
+
+		&:last-child {
+			margin-bottom:0;
+		}
+
+		.job-action-bar {
+			float:right;.clearfix();
+
+			.cb-toggle {
+				position:absolute;top:-9999px;float:left;
+				margin-left:10px;margin-right:15px;padding:0 5px 0 25px;.border-radius(@default-radius);
+				background-color: rgba(255,255,255,0.75);
+
+				&.cb-toggle-final-state {
+					.set-icon(@icon-eye-plus);
+				}
+
+				&.cb-toggle-initial-state {
+					.set-icon(@icon-eye-minus);
+				}
+
+				&:after {
+					left:5px;margin-top:-0.75rem;
+					font-size:1.5rem;
+				}
+			}
+
+			.config-button-container {
+				float:left;margin:0;padding:0;
+				background-color:transparent;border:0;
+
+				.config-button {
+					display:none;height:25px;padding:0 5px;.border-radius(@default-radius);
+					background-color: rgba(255,255,255,0.75);line-height:25px;.text-center();
+					text-decoration:none;color:@generic-strong;
+
+					&:after {
+						.iconfont(@icon-cogs);font-size:1.4rem;
+					}
+				}
+			}
+		}
+
+		.job-label {
+			float:left;margin-bottom:0;padding:0 5px;.border-radius(@default-radius);
+			background-color: rgba(255,255,255,0.75);
+		}
+
+		.job-icon {
+			float:left;display:block;width:2.4rem;height:2.4rem;margin-left:40px;
+			color:@generic-mid;.text-center();
+
+			&:after {
+				.iconfont('');font-size:2rem;line-height:2.4rem;
+			}
+		}
+
+		.job-report {
+			display:none;float:left;position:relative;height:2.4rem;margin-left:40px;margin-bottom:0;padding:0 5px 0 35px;.border-radius(@default-radius);
+			background-color: rgba(255,255,255,0.75);
+
+			&:after {
+				position: absolute;left:5px;top:50%;margin-top:-1.2rem;
+				.iconfont(@icon-meter);font-size:2rem;line-height:2.4rem;
+			}
+		}
+
+		&.process-ready {
+			.job-icon {
+				.set-icon(@icon-play3);
+			}
+		}
+		&.process-running {
+			background-color:lighten(desaturate(@primaryColor, 50%), 40%);
+
+			.job-icon {
+				.set-icon(@icon-spinner9);color:@primaryColor;
+				.animation(spin, infinite, linear, 0.25s);
+			}
+		}
+		&.process-error {
+			background-color:lighten(desaturate(@errorColor, 50%), 40%);
+
+			.job-icon {
+				.set-icon(@icon-cross);color:@errorColor;
+			}
+
+			.cb-toggle {
+				position:relative;top:auto;
+			}
+
+			.job-report {
+				display:block;
+			}
+
+			.job-action-bar {
+				.config-button {
+					display:block;
+				}
+			}
+
+		}
+		&.process-valid {
+			background-color:lighten(desaturate(@validColor, 50%), 40%);
+
+			.job-icon {
+				.set-icon(@icon-checkmark);color:@validColor;
+			}
+
+			.cb-toggle {
+				position:relative;top:auto;
+			}
+
+			.job-report {
+				display:block;
+			}
+		}
+	}
+
+	.cb-toggle-switch:checked ~ .job-details {
+		padding:10px;
+	}
+
+	.job-details {
+		clear: both;margin-bottom:0;padding:0;.border-radius(@default-radius);
+		background-color: rgba(255,255,255,0.65);
+
+		.job-details-msg {
+			margin-bottom: 15px;
+			.font-bold();.font-italic();font-size:1.8rem;
+		}
+
+		.job-details-sql-container {
+			position: relative;background-color: @white;padding-top: 2rem;
+
+			.pre-label {
+				position:absolute;top:0;right:0;padding:2px;
+				font-size: 1.4em;.font-bold();color: @primaryColor;border:solid 1px @primaryColor;
+				line-height: 2.4rem;
+			}
+
+			pre {
+				white-space: normal;padding:0 10px;overflow: visible;word-break: break-all;
+			}
+		}
+	}
+}
+
+
